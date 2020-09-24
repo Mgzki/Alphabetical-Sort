@@ -4,7 +4,10 @@ import os
 '''
 Created by: Max Grodzki
     Sorts input in alphabetical order, ignoring case. 
-    ()
+    (current regex splits paragraphs on '.?!' so phrases such as
+        ' "Will you keep working on it?" asked Man. '
+    are split into "Will you keep working on it?" and "asked Man."
+    thus the need for sorting regardless of case.)
 '''
 
 f = open("ShortStory.txt", "r")
@@ -27,6 +30,9 @@ for i in range(len(text)):
 #   opted for python's built in sort function (Timsort) as on average it is 
 #   just as fast as heapsort and mergesort, and faster in the best case.
 #text.sort(key = str.casefold)
+
+
+#The following methods are used for an implementation of Python's built in sort()
 
 #picking an arbitrarily large RUN, determines max size of subarrays/string length
 RUN = 1000
@@ -103,12 +109,9 @@ def timSort(arr, n):
             merge(arr, left, mid, right)  
           
         size = 2*size 
- 
 
 n = len(text)
 timSort(text, n)
-print(len(text))
-
 
 #If the file already exists, delete it
 if os.path.exists("SortedOutput.txt"):
@@ -117,5 +120,3 @@ if os.path.exists("SortedOutput.txt"):
 f = open("SortedOutput.txt", "w")
 for i in text:
     f.write(i + "\n")
-
-
