@@ -2,7 +2,7 @@ import re
 import os
 
 '''
-Created by: Max Grodzki
+Created by: Max Grodzki in Python 3.6.3
     Sorts input in alphabetical order, ignoring case. 
     (current regex splits paragraphs on '.?!' so phrases such as
         ' "Will you keep working on it?" asked Man. '
@@ -113,7 +113,7 @@ def timSort(arr, n):
 n = len(text)
 timSort(text, n)
 
-#If the file already exists, delete it
+#If output file already exists, delete it
 if os.path.exists("SortedOutput.txt"):
     os.remove("SortedOutput.txt")
 #Create output file
