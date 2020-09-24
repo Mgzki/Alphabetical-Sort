@@ -1,5 +1,11 @@
-# Alphabetical-Sort
+# Alphabetical-Sort (Python 3 implementation)
 Sorts the given assignment text into alphabetical order, ignoring case sensitivity. **Text is tokenized using regular expressions**
+
+## How to run:
+   ## Ensure both ShortStory.txt and alphabetize_text.py are in the same directory
+   ### on Windows, open command prompt in the directory containing the aforementioned files and enter 'py alphabetize_text.py'
+   ### on iOS, open terminal in the directory containing the aforementioned files and enter 'python3 alphabetize_text.py'
+   a file named SortedOutput.txt will appear within the directory containing the sorted text
 
 ## Assumptions:
 ### 1. Structure of text does not need to be maintained.
